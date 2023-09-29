@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Imagem e Botão</title>
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '271910365814358'); // Substitua pelo seu ID de pixel
+        fbq('track', 'PageView');
+      </script>
+  
+      <!-- Fim do Código do Pixel do Facebook -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #232325;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #imagem {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px; /* Espaço entre a imagem e o botão */
+            border-radius: 30px;
+            box-shadow: 0 0 50px black;
+        }
+
+        #botao {
+            background-color: #00ff4c;
+            color: #232323;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px green;
+        }
+        
+        h2 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>SINAIS 24 HORAS</h2>
+        <img id="imagem" src="fortunelogo.png" alt="Imagem">
+        <button id="botao">ENTRAR NO GRUPO DO WHATSAPP</button>
+    </div>
+
+
+    <script>
+        document.getElementById('botao').addEventListener('click', function() {
+            fbq('track', 'Lead'); // Use o nome do evento de registro que você configurou no Gerenciador de Eventos.
+        });
+    </script>
+</body>
+</html>
